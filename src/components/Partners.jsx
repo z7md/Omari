@@ -10,17 +10,17 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 const partners = [
-  { name: 'شركة أ', logo: '/images/boss.png' },
-  { name: 'شركة ب', logo: '/images/centerlogo.png' },
-   { name: 'شركة ج', logo: '/images/ishbilia.png.png' },
-//   { name: 'شركة د', logo: '/images/partner4.png' },
+  { name: 'شركة أ', logo: '/images/AbdulsamadALQurashi.png' },
+  { name: 'شركة ب', logo: '/images/Applebees.png' },
+   { name: 'شركة ج', logo: '/images/CenterPoint.png' },
+   { name: 'شركة د', logo: '/images/B-IT.png' },
 //   { name: 'شركة هـ', logo: '/images/partner5.png' },
   // … أضف الشركاء عندك هنا
 ];
 
 export default function Partners() {
   return (
-    <div className="w-full max-w-6xl mx-auto py-12 relative">
+    <div className="w-full max-w-6xl mx-auto py-12 relative select-none">
       {/* تلوين الأسهم */}
       <style>{`
         .swiper-button-next,
@@ -29,7 +29,9 @@ export default function Partners() {
         }
       `}</style>
 
-      <h2 className="text-2xl font-bold text-center mb-6">شركاؤنا</h2>
+          <h2 className="text-3xl md:text-5xl font-bold text-[#ab8e3a] mb-6 flex justify-center">
+            شركاؤنا
+          </h2>
 
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}

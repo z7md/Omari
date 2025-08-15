@@ -5,12 +5,13 @@ import Cards from '../components/Cards'
 import Footer from '../components/Footer'
 import CompanyLogo from '../components/CompanyLogo'
 import Partners from '../components/Partners'
+import ProjectsSection from '../components/ProjectsSection'
 function Home() {
   return <>
   <Navbar/>
     <Hero />
-    <Cards/>
-    <CompanyLogo/>
+    <ProjectsSection/>
+    {/* <Cards/> */}
     <Partners/>
     <Footer/>
     

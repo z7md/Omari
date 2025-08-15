@@ -84,7 +84,7 @@ export const About = () => {
               className="relative inline-block text-[#ab8e3a] text-3xl sm:text-4xl md:text-5xl font-semibold ml-4"
             >
               نبذة عن المجموعة
-              <span className="absolute bottom-0 left-0 h-1 w-full bg-gradient-to-r from-[#ab8e3a] to-[#ccbb88]" />
+              {/* <span className="absolute bottom-0 left-0 h-1 w-full bg-gradient-to-r from-[#ab8e3a] to-[#ccbb88]" /> */}
             </motion.h2>
             <motion.div
               variants={fadeIn("right", 0.3)}
@@ -132,7 +132,7 @@ export const About = () => {
               className="relative inline-block text-white text-3xl sm:text-4xl md:text-5xl font-semibold ml-4"
             >
               رؤيتنا
-              <span className="absolute bottom-0 left-0 h-1 w-full bg-white" />
+              {/* <span className="absolute bottom-0 left-0 h-1 w-full bg-white" /> */}
             </motion.h2>
             <motion.div
               variants={fadeIn("right", 0.5)}
@@ -165,7 +165,7 @@ export const About = () => {
               className="relative inline-block text-[#ab8e3a] text-3xl sm:text-4xl md:text-5xl font-semibold ml-4"
             >
               رسالتنا
-              <span className="absolute bottom-0 left-0 h-1 w-full bg-gradient-to-r from-[#ab8e3a] to-[#ccbb88]" />
+              {/* <span className="absolute bottom-0 left-0 h-1 w-full bg-gradient-to-r from-[#ab8e3a] to-[#ccbb88]" /> */}
             </motion.h2>
             <motion.div
               variants={fadeIn("right", 0.5)}
@@ -203,7 +203,7 @@ export const About = () => {
               className="relative inline-block text-white text-3xl sm:text-4xl md:text-5xl font-semibold ml-4"
             >
               إدارة المجموعة
-              <span className="absolute bottom-0 left-0 h-1 w-full bg-white" />
+              {/* <span className="absolute bottom-0 left-0 h-1 w-full bg-white" /> */}
             </motion.h2>
             <motion.div
               variants={fadeIn("right", 0.4)}
@@ -217,7 +217,7 @@ export const About = () => {
             <motion.img
               src={MajidPhoto}
               alt="ماجد بن ناصر العمري"
-              className="md:w-48 w-full h-auto rounded-lg shadow-xl"
+              className="md:w-48 w-full h-auto rounded-lg"
               whileHover={!isMobile ? { rotate: [0, 3, -3, 0] } : {}}
             />
             <div className="md:flex-1 space-y-4 text-xl sm:text-2xl leading-relaxed">
@@ -279,7 +279,7 @@ export const About = () => {
               className="relative inline-block text-[#ab8e3a] text-3xl sm:text-4xl md:text-5xl font-semibold ml-4"
             >
               من أبرز مشاريع المجموعة
-              <span className="absolute bottom-0 left-0 h-1 w-full bg-gradient-to-r from-[#ab8e3a] to-[#ccbb88]" />
+              {/* <span className="absolute bottom-0 left-0 h-1 w-full bg-gradient-to-r from-[#ab8e3a] to-[#ccbb88]" /> */}
             </motion.h2>
             <motion.div
               variants={fadeIn("right", 0.5)}
@@ -304,7 +304,7 @@ export const About = () => {
             <motion.img
               src={OmariLogo}
               alt="العمري سنتر"
-              className="md:w-48 w-full h-auto rounded-lg shadow-lg"
+              className="md:w-48 w-full h-auto rounded-lg "
               whileHover={!isMobile ? { scale: 1.05 } : {}}
             />
           </motion.div>
@@ -346,7 +346,7 @@ export const About = () => {
             <motion.img
               src={IshbiliaLogo}
               alt="مشروع ضاحية إشبيليا"
-              className="md:w-48 w-full h-auto rounded-lg shadow-lg"
+              className="md:w-48 w-full h-auto rounded-lg"
               whileHover={!isMobile ? { scale: 1.05 } : {}}
             />
           </motion.div>
@@ -366,7 +366,7 @@ export const About = () => {
             className="relative inline-block text-white text-3xl sm:text-4xl md:text-5xl font-semibold mx-auto mb-4"
           >
             تواصل معنا
-            <span className="absolute bottom-0 left-0 h-1 w-full bg-white" />
+            {/* <span className="absolute bottom-0 left-0 h-1 w-full bg-white" /> */}
           </motion.h2>
           <motion.p
             variants={fadeIn("up", 0.7)}

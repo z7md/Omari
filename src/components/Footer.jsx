@@ -1,11 +1,9 @@
 import React from 'react';
-import { FC } from "react";
 import { motion } from "framer-motion";
 import { FaWhatsapp } from "react-icons/fa";
 import { SiGooglemaps } from "react-icons/si";
 import { IoCallOutline } from "react-icons/io5";
-import Image from "../../public/images/logo.png"
-
+import Image from "../../public/images/logo.png";
 import { fadeIn } from "../utils/motion";
 
 const Footer = () => {
@@ -14,9 +12,9 @@ const Footer = () => {
       variants={fadeIn("up", 0.2)}
       initial="hidden"
       whileInView="show"
-      className="bg-gray-50 py-12 text-right"
+      className="bg-gray-50 py-12 text-right text-gray-800"
     >
-      <div className=" mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top Section */}
         <motion.div
           variants={fadeIn("up", 0.3)}
@@ -38,27 +36,30 @@ const Footer = () => {
               العميل وجودة الخدمة هما أولويتنا.
             </motion.p>
             <motion.div variants={fadeIn("up", 0.6)} className="flex gap-4">
+              {/* Call */}
               <motion.a
                 whileHover={{ scale: 1.1 }}
                 href="tel:+966553116613"
-                className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-red-600 hover:text-white transition-colors"
-                aria-label="Call Us" // Added aria-label
+                className="w-10 h-10 bg-[#ab8e3a] rounded-full flex items-center justify-center text-white hover:opacity-90 transition-opacity"
+                aria-label="Call Us"
               >
                 <IoCallOutline className="w-5 h-5" />
               </motion.a>
+              {/* WhatsApp */}
               <motion.a
                 whileHover={{ scale: 1.1 }}
                 href="https://wa.me/966553116613"
-                className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-green-500 hover:text-white transition-colors"
-                aria-label="Chat with us on WhatsApp" // Added aria-label
+                className="w-10 h-10 bg-[#ab8e3a] rounded-full flex items-center justify-center text-white hover:opacity-90 transition-opacity"
+                aria-label="Chat with us on WhatsApp"
               >
                 <FaWhatsapp className="w-5 h-5" />
               </motion.a>
+              {/* Google Maps */}
               <motion.a
                 whileHover={{ scale: 1.1 }}
                 href="https://maps.app.goo.gl/wAiS7hjF43SUVmVF8?g_st=ic"
-                className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-blue-500 hover:text-white transition-colors"
-                aria-label="View location on Google Maps" // Added aria-label
+                className="w-10 h-10 bg-[#ab8e3a] rounded-full flex items-center justify-center text-white hover:opacity-90 transition-opacity"
+                aria-label="View location on Google Maps"
               >
                 <SiGooglemaps className="w-5 h-5" />
               </motion.a>
@@ -72,75 +73,43 @@ const Footer = () => {
           >
             {/* Links Section */}
             <div>
-              <h2 className="text-lg font-bold text-primary mb-4">
+              <h2 className="text-lg font-bold text-[#ab8e3a] mb-4">
                 روابط مهمة
               </h2>
-              <ul className="space-y-3 text-[16px] text-gray-700 font-medium">
-                <motion.li whileHover={{ x: 5 }}>
-                  <a
-                    href="/#services"
-                    className="hover:text-red-600 transition-colors cursor-pointer"
-                  >
-                    خدماتنا
-                  </a>
-                </motion.li>
-                <motion.li whileHover={{ x: 5 }}>
-                  <a
-                    href="/#about"
-                    className="hover:text-red-600 transition-colors cursor-pointer"
-                  >
-                    من نحن
-                  </a>
-                </motion.li>
-                <motion.li whileHover={{ x: 5 }}>
-                  <a
-                    href="/#contact"
-                    className="hover:text-red-600 transition-colors cursor-pointer"
-                  >
-                    تواصل معنا
-                  </a>
-                </motion.li>
-                <motion.li whileHover={{ x: 5 }}>
-                  <a
-                    href="/#testimonials"
-                    className="hover:text-red-600 transition-colors cursor-pointer"
-                  >
-                    آراء العملاء
-                  </a>
-                </motion.li>
+              <ul className="space-y-3 text-[16px] text-gray-600 font-medium">
+                {["خدماتنا","من نحن","تواصل معنا","آراء العملاء"].map((item, idx) => (
+                  <motion.li key={idx} whileHover={{ x: 5 }}>
+                    <a
+                      href={`/#${item.replace(/\s/g, "").toLowerCase()}`}
+                      className="hover:text-[#ab8e3a]/80 transition-colors cursor-pointer"
+                    >
+                      {item}
+                    </a>
+                  </motion.li>
+                ))}
               </ul>
             </div>
 
             {/* Certifications Section */}
             <div>
-              <h3 className="text-lg font-bold text-primary mb-4">
+              <h3 className="text-lg font-bold text-[#ab8e3a] mb-4">
                 الشهادات والرخص
               </h3>
-              <ul className="space-y-3 text-[16px] text-gray-700 font-medium">
-                <motion.li whileHover={{ x: 5 }}>
-                  <a
-                    href="#"
-                    className="hover:text-red-600 transition-colors cursor-pointer"
-                  >
-                    المركز الوطني لإدارة النفايات (MWAN)
-                  </a>
-                </motion.li>
-                <motion.li whileHover={{ x: 5 }}>
-                  <a
-                    href="#"
-                    className="hover:text-red-600 transition-colors cursor-pointer"
-                  >
-                    المركز الوطني للرقابة على الالتزام البيئي
-                  </a>
-                </motion.li>
-                <motion.li whileHover={{ x: 5 }}>
-                  <a
-                    href="#"
-                    className="hover:text-red-600 transition-colors cursor-pointer"
-                  >
-                    شهادة سلامة بيئية معتمدة
-                  </a>
-                </motion.li>
+              <ul className="space-y-3 text-[16px] text-gray-600 font-medium">
+                {[
+                  "المركز الوطني لإدارة النفايات (MWAN)",
+                  "المركز الوطني للرقابة على الالتزام البيئي",
+                  "شهادة سلامة بيئية معتمدة"
+                ].map((cert, idx) => (
+                  <motion.li key={idx} whileHover={{ x: 5 }}>
+                    <a
+                      href="#"
+                      className="hover:text-[#ab8e3a]/80 transition-colors cursor-pointer"
+                    >
+                      {cert}
+                    </a>
+                  </motion.li>
+                ))}
               </ul>
             </div>
           </motion.div>
@@ -156,14 +125,13 @@ const Footer = () => {
             className="flex flex-col md:flex-row justify-between items-center text-center gap-4 text-sm text-gray-600"
           >
             <span>
-              © {new Date().getFullYear()} مثرى للخدمات البيئية – جميع الحقوق
-              محفوظة
+              © {new Date().getFullYear()} مثرى للخدمات البيئية – جميع الحقوق محفوظة
             </span>
             <span>
               Developed by{" "}
               <a
                 href="https://www.linkedin.com/in/hamad-almohaimeed/"
-                className="text-primary hover:underline"
+                className="text-[#ab8e3a] hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
               >

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function CardItem(props) {
   return (
-    <li className="flex flex-1 mx-4 mb-8 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+    <li className="flex flex-1 mx-2 mb-8 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
       <Link
         className="flex flex-col w-full no-underline"
         to={props.path}
