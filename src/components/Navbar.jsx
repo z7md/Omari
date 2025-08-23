@@ -12,17 +12,17 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const projectItems = [
-    { href: "/projects/ishbilia", label: "أشبيليا" },
-    { href: "/projects/omarycenter", label: "العمري سنتر" },
-    { href: "/projects/derahcenter", label: "مركز الديرة" },
+    { href: "/Omary/projects/ishbilia", label: "أشبيليا" },
+    { href: "/Omary/projects/omarycenter", label: "العمري سنتر" },
+    { href: "/Omary/projects/derahcenter", label: "مركز الديرة" },
   ];
 
   const navLinks = [
-    { href: "/", label: "الرئيسية" },
-    { href: "/about", label: "مجموعة العمري" },
-    { href: "/projects", label: "مشاريعنا" },
-    { href: "/projects/initiative", label: "العمري لخدمة المجتمع" },
-    { href: "/contact", label: "تواصل معنا" },
+    { href: "/Omary", label: "الرئيسية" },
+    { href: "/Omary/about", label: "مجموعة العمري" },
+    { href: "/Omary/projects", label: "مشاريعنا" },
+    { href: "/Omary/projects/initiative", label: "العمري لخدمة المجتمع" },
+    { href: "/Omary/contact", label: "تواصل معنا" },
     
 
   ];
