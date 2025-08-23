@@ -147,7 +147,6 @@ const Navbar = () => {
           className="md:hidden p-2"
           onClick={() => {
             setIsMenuOpen((v) => !v);
-            setShowProjectsMenu(false);
           }}
           aria-label="Menu"
         >
@@ -166,9 +165,6 @@ const Navbar = () => {
           initial="hidden"
           animate="show"
           className="md:hidden bg-white border-t border-gray-100 py-4"
-          onTouchStart={() => {
-            if (showProjectsMenu) setShowProjectsMenu(false);
-          }}
         >
           <div className="container mx-auto px-4 space-y-4">
             {navLinks.map((link, idx) => {
