@@ -14,15 +14,15 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/Omary" element={<Home />} />
-        <Route path="/Omary/Ishbilia" element={<Ishbilia/>} />
-        <Route path="/Omary/contact" element={<Contact />} />
-        <Route path="/Omary/about" element={<About/>} />
-        <Route path="/Omary/projects" element={<Projects/>} />
-        <Route path="/Omary/projects/initiative" element={<Initiative/>} />
-        <Route path="/Omary/projects/ishbilia" element={<Ishbilia/>} />
-        <Route path="/Omary/projects/omarycenter" element={<Omarycenter/>} />
-        <Route path="/Omary/projects/derahcenter" element={<Derah/>} />
+        <Route path="/" element={<Home />} />
+        <Route path="/Ishbilia" element={<Ishbilia/>} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/about" element={<About/>} />
+        <Route path="/projects" element={<Projects/>} />
+        <Route path="/projects/initiative" element={<Initiative/>} />
+        <Route path="/projects/ishbilia" element={<Ishbilia/>} />
+        <Route path="/projects/omarycenter" element={<Omarycenter/>} />
+        <Route path="/projects/derahcenter" element={<Derah/>} />
       </Routes>
       </BrowserRouter>
     
