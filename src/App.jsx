@@ -9,10 +9,12 @@ import { Projects } from './pages/Projects'
 import { Initiative } from './pages/Initiative'
 import Omarycenter from './pages/Omarycenter';
 import Derah from './pages/Derah'
+import ScrollToTop from './components/ScrollToTop'
 
 function App() {
   return (
     <BrowserRouter>
+    <ScrollToTop>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Ishbilia" element={<Ishbilia/>} />
@@ -24,6 +26,7 @@ function App() {
         <Route path="/projects/omarycenter" element={<Omarycenter/>} />
         <Route path="/projects/derahcenter" element={<Derah/>} />
       </Routes>
+      </ScrollToTop>
       </BrowserRouter>
     
   )
