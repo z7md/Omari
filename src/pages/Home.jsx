@@ -2,7 +2,8 @@
 import React from 'react';
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/motion";
-
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import AboutSnippet from '../components/AboutSnippet';
@@ -11,6 +12,22 @@ import Partners from '../components/Partners';
 import Footer from '../components/Footer';
 
 function Home() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const savedPath = localStorage.getItem("redirect_path");
+
+    if (savedPath) {
+      localStorage.removeItem("redirect_path");
+
+      if (savedPath.startsWith("#")) {
+        // It's a hash link to a section — don't navigate
+        return;
+      }
+
+      navigate(savedPath);
+    }
+  }, [navigate]);
   return (
     <>
       <Navbar />
