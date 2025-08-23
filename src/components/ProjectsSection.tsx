@@ -15,7 +15,7 @@ const ProjectsSection = () => {
   const projects = [
     {
       id: 1,
-      href:"/Omary/projects/ishbilia",
+      href:"/projects/ishbilia",
       title: 'مخطط اشبيليا',
       location: 'شمال بريدة',
       type: 'سكني',
@@ -26,7 +26,7 @@ const ProjectsSection = () => {
     },
     {
       id: 2,
-      href:"/Omary/projects/omarycenter",
+      href:"/projects/omarycenter",
       title: 'العمري سنتر',
       location: 'طريق أبو بكر الصديق',
       type: 'تجاري',
@@ -37,7 +37,7 @@ const ProjectsSection = () => {
     },
     {
       id: 3,
-      href:"/Omary/projects/initiative",
+      href:"/projects/initiative",
       title: 'العمري لخدمة المجتمع',
       location: 'شرق بريدة',
       type: 'أنساني',
@@ -48,7 +48,7 @@ const ProjectsSection = () => {
     },
     {
       id: 4,
-      href:"/Omary/projects/derahcenter",
+      href:"/projects/derahcenter",
       title: 'مركز الديرة',
       location: 'جنوب بريدة',
       type: 'تجاري',
