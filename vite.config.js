@@ -4,5 +4,5 @@ export default defineConfig({
   plugins: [
     tailwindcss(),
   ],
-  base:"/Omari",
+  base:process.env.VITE_BASE_PATH || '/Omary',
 })
