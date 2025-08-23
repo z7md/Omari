@@ -200,9 +200,8 @@ const Navbar = () => {
                             onClick={() => {
                               setActiveLink("/projects");
                               setIsMenuOpen(false);
-                              setShowProjectsMenu(false);
                             }}
-                            className="block text-xl text-gray-600 hover:text-[#ab8e3a] py-1 mr-2"
+                            className="block text-md text-gray-600 hover:text-[#ab8e3a] py-4 mr-2"
                           >
                             {proj.label}
                           </a>
