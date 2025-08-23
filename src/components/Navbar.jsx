@@ -199,7 +199,6 @@ const Navbar = () => {
                             href={proj.href}
                             onClick={() => {
                               setActiveLink("/projects");
-                              setIsMenuOpen(false);
                             }}
                             className="block text-md text-gray-600 hover:text-[#ab8e3a] py-4 mr-2"
                           >
