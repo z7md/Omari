@@ -14,7 +14,7 @@ import ScrollToTop from './components/ScrollToTop'
 function App() {
   return (
     <BrowserRouter>
-    <ScrollToTop>
+    <ScrollToTop/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Ishbilia" element={<Ishbilia/>} />
@@ -26,7 +26,6 @@ function App() {
         <Route path="/projects/omarycenter" element={<Omarycenter/>} />
         <Route path="/projects/derahcenter" element={<Derah/>} />
       </Routes>
-      </ScrollToTop>
       </BrowserRouter>
     
   )
