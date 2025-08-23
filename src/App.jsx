@@ -1,7 +1,7 @@
 import React from 'react'    
 import { Routes, Route, BrowserRouter } from 'react-router-dom'
 import Home from './pages/Home'
-import {Ishbilia} from './pages/Ishbilia'
+import Ishbilia from './pages/Ishbilia'
  import "./App.css"
 import { Contact } from './pages/Contact'
 import { About } from './pages/About'

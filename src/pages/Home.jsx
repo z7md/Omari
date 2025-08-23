@@ -1,21 +1,73 @@
-import React from 'react'    
-import Hero from '../components/Hero'
-import Navbar from '../components/Navbar'
-import Cards from '../components/Cards'
-import Footer from '../components/Footer'
-import CompanyLogo from '../components/CompanyLogo'
-import Partners from '../components/Partners'
-import ProjectsSection from '../components/ProjectsSection'
+// src/pages/Home.jsx
+import React from 'react';
+import { motion } from "framer-motion";
+import { fadeIn } from "../utils/motion";
+
+import Navbar from '../components/Navbar';
+import Hero from '../components/Hero';
+import AboutSnippet from '../components/AboutSnippet';
+import ProjectsSection from '../components/ProjectsSection';
+import Partners from '../components/Partners';
+import Footer from '../components/Footer';
+
 function Home() {
-  return <>
-  <Navbar/>
-    <Hero />
-    <ProjectsSection/>
-    {/* <Cards/> */}
-    <Partners/>
-    <Footer/>
-    
-  </>
+  return (
+    <>
+      <Navbar />
+
+      {/* HERO */}
+      <motion.section
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <Hero video="home" />
+      </motion.section>
+
+      {/* ABOUT */}
+      <motion.section
+        variants={fadeIn("up", 0.2)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.1 }}
+        className="py-8"
+      >
+        <AboutSnippet />
+      </motion.section>
+
+      {/* PROJECTS */}
+      <motion.section
+        variants={fadeIn("up", 0.2)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.1 }}
+        className="py-8"
+      >
+        <ProjectsSection />
+      </motion.section>
+
+      {/* PARTNERS */}
+      <motion.section
+        variants={fadeIn("up", 0.3)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.1 }}
+        className="py-8"
+      >
+        <Partners />
+      </motion.section>
+
+      {/* FOOTER */}
+      <motion.section
+        variants={fadeIn("up", 0.35)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.1 }}
+      >
+        <Footer />
+      </motion.section>
+    </>
+  );
 }
 
-export default Home
+export default Home;

@@ -41,7 +41,7 @@ const ProjectsSection = () => {
       title: 'العمري لخدمة المجتمع',
       location: 'شرق بريدة',
       type: 'أنساني',
-      // status: 'متاح للحجز',
+      status: '',
       image: project3,
       description: "مؤسسة غير ربحية",
       features: ['مبادرات']
@@ -71,6 +71,8 @@ const ProjectsSection = () => {
         return 'bg-[#ab8e3a]';
       case 'قريباً':
         return 'bg-gray-400';
+        case '':
+          return 'hidden';
       default:
         return 'bg-gray-400';
     }
@@ -116,15 +118,15 @@ const ProjectsSection = () => {
                   <span>{project.location}</span>
                 </div>
                 
-                <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-[#ab8e3a] transition-colors">
+                <h3 className="text-2xl  text-gray-900 mb-3 group-hover:text-[#ab8e3a] transition-colors">
                   {project.title}
                 </h3>
                 
-                <p className="text-gray-700 mb-4 leading-relaxed">
+                {/* <p className="text-gray-700 mb-4 leading-relaxed">
                   {project.description}
-                </p>
+                </p> */}
                 
-                <div className="flex flex-wrap gap-2 mb-6">
+                {/* <div className="flex flex-wrap gap-2 mb-6">
                   {project.features.map((feature, idx) => (
                     <Badge
                       key={idx}
@@ -134,7 +136,7 @@ const ProjectsSection = () => {
                       {feature}
                     </Badge>
                   ))}
-                </div>
+                </div> */}
                 
                 {/* Details Button with left arrow */}
                 <Button 

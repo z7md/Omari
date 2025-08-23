@@ -1,82 +1,119 @@
-import React from 'react';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-import { motion } from "framer-motion";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
-import { staggerContainer, textVariant, fadeIn } from "../utils/motion";
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import React from "react";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
-export const Ishbilia = () => {
-  // بيانات المشروع السكني
-  const projectData = {
-    title: "المشروع السكني الفاخر",
-    mainImage: "/images/hom3_enhanced.png",
-    attachments: [
-      {
-        id: 1,
-        title: "الفلل السكنية",
-        description: "تصاميم فاخرة بمساحات مختلفة تلبي جميع احتياجات العائلة، تتميز بتصاميم معمارية مبتكرة وحدائق خاصة.",
-        image: "/images/vila.png",
-        features: [
-          "مساحات تبدأ من 400م² حتى 1200م²",
-          "تصاميم حديثة بتشطيبات فاخرة",
-          "حدائق خاصة ونوافير مياه",
-          "مواقف سيارات متعددة"
-        ]
-      },
-      {
-        id: 2,
-        title: "البوليفارد",
-        description: "منطقة تسوق وترفيه بطول 1.5 كم مع مقاهي ومطاعم عالمية، مصممة لتوفر تجربة تسوق فريدة.",
-        image: "/images/Bole.png",
-        features: [
-          "أكثر من 100 محل تجاري",
-          "مطاعم ومقاهي عالمية",
-          "منطقة ترفيهية للأطفال",
-          "أحداث وفعاليات دورية"
-        ]
-      },
-      {
-        id: 3,
-        title: "المدارس العالمية",
-        description: "مجمع تعليمي يضم أفضل المدارس الدولية المعتمدة، مع مرافق تعليمية متطورة.",
-        image: "/images/school.png",
-        features: [
-          "مناهج أمريكية وبريطانية",
-          "مرافق رياضية متكاملة",
-          "معامل علوم وتكنولوجيا",
-          "أنشطة لا صفية متنوعة"
-        ]
-      },
-      {
-        id: 4,
-        title: "الكمباوند السكني",
-        description: "تصميم عصري مع أنظمة أمن متكاملة ومرافق رياضية، يوفر خصوصية وأمانًا كاملًا.",
-        image: "/images/comband.png",
-        features: [
-          "نظام أمني 24/7",
-          "صالات رياضية ومسابح",
-          "حدائق ونوافير مركزية",
-          "خدمات صيانة دورية"
-        ]
-      }
-    ],
-    projectFeatures: [
-      "موقع استراتيجي في قلب المدينة",
-      "مساحات خضراء تشكل 60% من المساحة الكلية",
-      "نظام أمني متكامل 24/7",
-      "مراكز خدمية وتجارية داخلية",
-      "صالات رياضية ومسابح أولمبية"
-    ]
-  };
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
+/** عدّل المسارات حسب صورك داخل /public/images */
+const HERO_IMAGE = "/images/Ish-Home.png";
+const ACCESS_IMAGE = "/images/roads.png";
+const MASTERPLAN_IMAGE = "/images/structure.png";
+
+const FACILITY_GALLERY = [
+  {
+    title: "إشبيليا بوليفارد",
+    images: ["/images/Ish-B1.png","/images/Ish-B2.png",],
+  },
+  {
+    title: "فلل ووحدات سكنية",
+    images: ["/images/Ish-V1.png","/images/Ish-V2.png","/images/Ish-V3.png","/images/Ish-V4.png",],
+  },
+  {
+    title: "مركز العمري الثقافي",
+    images: ["/images/Ish-C1.png","/images/Ish-C2.png","/images/Ish-C3.png"],
+  },
+  {
+    title: "جامع الشيخ ناصر بن سليمان العمري رحمه الله" ,
+    images: ["/images/Ish-M1.png","/images/Ish-M2.png","/images/Ish-M3.png","/images/Ish-M4.png",],
+  },
+  {
+    title: "إشبيليا بارك" ,
+    images: ["/images/Ish-P1.png","/images/Ish-P2.png","/images/Ish-P3.png","/images/Ish-P4.png","/images/Ish-P5.png",],
+  },
+];
+
+const PHASES_GALLERY = [
+  "/images/Ph1.png",
+  "/images/Ph2.png",
+  "/images/Ph3.png",
+  "/images/Ph4.png",
+  "/images/Ph5.png",
+  "/images/Ph6.png",
+  "/images/Ph7.png",
+  "/images/Ph8.png",
+  "/images/Ph9.png",
+  "/images/Ph10.png",
+  "/images/Ph11.png",
+  "/images/Ph12.png",
+  "/images/Ph13.png",
+  "/images/Ph14.png",
+  "/images/Ph15.png",
+
+];
+
+/* UI محلي */
+const SectionTitle = ({ children }) => (
+  <h2 className="text-2xl md:text-3xl font-bold mb-4 text-[#ab8e3a]">{children}</h2>
+);
+const Card = ({ children, className = "" }) => (
+  <div className={`rounded-2xl border border-gray-200 bg-white shadow-sm ${className}`}>{children}</div>
+);
+const CardHeader = ({ children, className = "" }) => <div className={`p-4 border-b border-gray-100 ${className}`}>{children}</div>;
+const CardTitle = ({ children, className = "" }) => <h3 className={`text-lg font-semibold ${className} text-[#ab8e3a]`}>{children}</h3>;
+const CardContent = ({ children, className = "" }) => <div className={`p-4 ${className}`}>{children}</div>;
+
+/* بطاقة مرفق + Swiper */
+const FacilityCard = ({ title, images }) => (
+  <Card className="overflow-hidden">
+    <CardHeader>
+      <CardTitle>{title}</CardTitle>
+    </CardHeader>
+    <CardContent>
+      <div className="rounded-2xl overflow-hidden">
+        <Swiper
+          modules={[Navigation, Pagination, Autoplay]}
+          navigation
+          pagination={{ clickable: true }}
+          autoplay={{ delay: 3500, disableOnInteraction: false }}
+          loop
+          dir="rtl"
+        >
+          {images.map((src, i) => (
+            <SwiperSlide key={i}>
+              <img src={src} alt={`${title}-${i + 1}`} className="w-full h-[42vh] md:h-[50vh] object-cover" />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+    </CardContent>
+  </Card>
+);
+
+export default function Ishbilia() {
+        {/* تلوين الأسهم */}
+
+  const accessPoints = [
+  `يبعـد مشـروع اشـبيليا عـن مخطـط الزيتونـة السـكني 500 متـر وهـو مـن اكبـر المخططـات السـكنية
+  الواعـدة شـمال بريـدة `,
+    `يقـع مشـروع اشـبيليا بالقـرب مـن المخططـات والاحيـاء السـكنية الجديـدة والنمـو العمرانـي الاكثـر نموا
+    وجاذبيـة لمدينـة بريدة `,
+    ` يبعد مشروع اشبيليا عن كوبري تقاطع طريق عمر بن الخطاب مع الدائري الشمالي 14 كم`,
+    ` يبعد مشروع اشبيليا عن مطار القصيم وجامعة القصيم 20 كم`,
+    `يبعد مشروع اشبيليا عن قلب مدينة بريدة « البرج والإمارة والأمانة « 20 كم`,
+    `يبعد مشروع اشبيليا عن محافظة عنيزه 40 كم`,
+    `يبعد مشروع اشبيليا عن محافظة البكيرية 40 كم`,
+    `يبعد مشروع اشبيليا عن محافظتي رياض الخبراء والخبراء 50 كم`,
+    `يبعد مشروع اشبيليا عن محافظة الرس 75 كم`,  
+
+  ];
 
   return (
-    <>
-      <Navbar/>
-      <style>{`
+    <div className="min-h-screen w-full bg-white text-gray-800">
+              <style>{`
         .swiper-button-next,
         .swiper-button-prev {
           color: #ab8e3a;
@@ -88,157 +125,83 @@ export const Ishbilia = () => {
         .swiper-pagination-bullet-active {
           background: #ab8e3a;
         }
-        .attachment-card:hover {
-          transform: translateY(-5px);
-          box-shadow: 0 10px 20px rgba(171, 142, 58, 0.3);
-          border-color: #ab8e3a;
-        }
       `}</style>
-      
-      <div className="min-h-screen bg-white mt-[70px] md:mt-[100px]">
-        {/* الصورة الرئيسية للمشروع (كاملة الشاشة) */}
-        <div className="w-full h-screen max-h-[80vh] overflow-hidden relative">
-          <img 
-            src={projectData.mainImage} 
-            alt="صورة رئيسية للمشروع السكني"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#ab8e3a]/30 to-transparent flex items-end justify-center pb-16">
-            {/* <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold text-center text-white drop-shadow-lg">
-              {projectData.title}
-              <div className="w-32 h-1 bg-[#ab8e3a] mx-auto mt-4"></div>
-            </h1> */}
-          </div>
+      <Navbar />
+
+      {/* HERO */}
+      <section className="relative w-full h-[100vh] md:h-[86vh]">
+        <img src={HERO_IMAGE} alt="Project Hero" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0 " />
+        <div className="relative z-10 h-full flex items-center justify-center text-center text-white">
         </div>
-        
-        {/* محتوى الصفحة */}
-        <div className="max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-          {/* مرفقات المشروع */}
-          <div className="mb-16">
-            <h2 className="text-2xl sm:text-3xl font-bold text-center text-[#ab8e3a] mb-8 relative pb-4">
-              مرافق المشروع
-              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-[#ab8e3a]"></div>
-            </h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {projectData.attachments.map((attachment) => (
-                <div 
-                  key={attachment.id} 
-                  className="attachment-card bg-white rounded-lg shadow-md overflow-hidden border border-[#ab8e3a] transition-all duration-300"
-                >
-                  {/* صورة المرفق */}
-                  <div className="w-full h-64 overflow-hidden relative">
-                    <img
-                      src={attachment.image}
-                      alt={`صورة ${attachment.title}`}
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-[#ab8e3a]/20 hover:bg-transparent transition-all duration-300"></div>
-                  </div>
-                  
-                  {/* محتوى المرفق */}
-                  <div className="p-6">
-                    <h3 className="text-xl sm:text-2xl font-semibold text-[#ab8e3a] mb-3 border-b border-[#ab8e3a]/30 pb-2">
-                      {attachment.title}
-                    </h3>
-                    <p className="text-gray-700 mb-4">
-                      {attachment.description}
-                    </p>
-                    
-                    {/* مميزات المرفق */}
-                    <div className="mt-4">
-                      <h4 className="text-lg font-medium text-[#ab8e3a] mb-2 border-b border-[#ab8e3a]/30 pb-1 inline-block">
-                        المميزات:
-                      </h4>
-                      <ul className="space-y-2 mt-3">
-                        {attachment.features.map((feature, index) => (
-                          <li key={index} className="flex items-start">
-                            <span className="text-[#ab8e3a] ml-2">•</span>
-                            <span className="text-gray-700">{feature}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-          
-          {/* مميزات المشروع العامة */}
-          <div className="bg-white rounded-lg shadow-md p-6 mb-12 border border-[#ab8e3a]/30 relative overflow-hidden">
-            <div className="absolute top-0 left-0 w-full h-1 bg-[#ab8e3a]"></div>
-            <h2 className="text-xl sm:text-2xl font-semibold text-[#ab8e3a] mb-4 flex items-center">
-              <svg className="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" />
-              </svg>
-              مميزات المشروع
-            </h2>
-            <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-              {projectData.projectFeatures.map((feature, index) => (
-                <li key={index} className="flex items-start bg-[#faf8f3] p-3 rounded-lg">
-                  <span className="text-[#ab8e3a] ml-2">•</span>
-                  <span className="text-gray-700">{feature}</span>
-                </li>
+      </section>
+
+      <section dir="rtl" className="w-[92%] md:w-[86%] mx-auto py-10 md:py-16">
+        {/* 1) موقع المشروع وسهولة الوصول والطرق المحيطة */}
+        <SectionTitle>موقع المشروع والطرق المحيطة</SectionTitle>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+          <div>
+            <ul className="list-disc pr-5 space-y-2 leading-7 text-gray-700">
+              {accessPoints.map((pt, i) => (
+                <li key={i}>{pt}</li>
               ))}
             </ul>
           </div>
-          
-          {/* خريطة الموقع */}
-          <div className="bg-white rounded-lg shadow-md p-6 mb-12 border border-[#ab8e3a]/30 relative overflow-hidden">
-            <div className="absolute top-0 left-0 w-full h-1 bg-[#ab8e3a]"></div>
-            <h2 className="text-xl sm:text-2xl font-semibold text-[#ab8e3a] mb-4 flex items-center">
-              <svg className="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-              </svg>
-              موقع المشروع
-            </h2>
-            <div className="aspect-w-16 aspect-h-9 bg-gray-200 rounded-lg overflow-hidden border border-[#ab8e3a]/30">
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1ddummy!2d46.6752957!3d24.7135517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDQyJzQ4LjgiTiA0NsKwNDAnMzEuMCJF!5e0!3m2!1sen!2ssa!4v1620000000000!5m2!1sen!2ssa" 
-                width="100%" 
-                height="450" 
-                style={{border:0}} 
-                allowFullScreen="" 
-                loading="lazy"
-                title="موقع المشروع على الخريطة"
-              ></iframe>
-            </div>
-
+          <div>
+            <img src={ACCESS_IMAGE} alt="خريطة الوصول والطرق المحيطة" className=" border overflow-hidden max-h-[600px] w-fit rounded-xl" />
           </div>
-          
-          <motion.section
-          id="contact"
-          variants={fadeIn("up", 0.4)}
-                            initial={"hidden"}
-        whileInView="show"
-        viewport={{ once: false, amount: 0.1 }}
-          className="scroll-mt-[100px] bg-[#ab8e3a] text-white px-6 py-12 rounded-lg text-center"
-        >
-          <motion.h2
-            variants={textVariant(0.6)}
-            className="relative inline-block text-white text-3xl sm:text-4xl md:text-5xl font-semibold mx-auto mb-4"
-          >
-            تواصل معنا
-          </motion.h2>
-          <motion.p
-            variants={fadeIn("up", 0.7)}
-            className="text-xl sm:text-2xl mb-6"
-          >
-            لأي استفسار أو شراكة، يسعدنا تواصلكم عبر القنوات التالية:
-          </motion.p>
-          <motion.a
-            href="/contact"
-            variants={fadeIn("up", 0.7)}
-            className="inline-block px-8 py-3 bg-white text-[#ab8e3a] font-semibold rounded-full shadow-xl hover:shadow-2xl transition-shadow"
-          >
-            ابدأ المحادثة الآن
-          </motion.a>
-        </motion.section>
         </div>
 
-      </div>
-      <Footer/>
-    </>
+        {/* 2) مخططات الموقع العام و شبكة الطرق الداخلية والخارجية */}
+        <div className="mt-12">
+          <SectionTitle>مخططات الموقع العام و شبكة الطرق الداخلية والخارجية</SectionTitle>
+          <div className="flex justify-center items-center">
+            <img src={MASTERPLAN_IMAGE} alt="المخطط العام للموقع" className="border object-contain max-h-[600px] w-fit rounded-2xl" />
+          </div>
+        </div>
+
+        {/* 3) مرافق المشروع */}
+        <div className="mt-12">
+          <SectionTitle className="text-[#ab8e3a]">مرافق المشروع</SectionTitle>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {FACILITY_GALLERY.map((f, i) => (
+              <FacilityCard key={i} title={f.title} images={f.images} />
+            ))}
+          </div>
+        </div>
+
+        {/* 4) مراحل عمل المشروع */}
+        <div className="mt-12">
+          <SectionTitle>مراحل عمل المشروع</SectionTitle>
+          <div className="rounded-2xl overflow-hidden border shadow-sm">
+            <Swiper
+              modules={[Navigation, Pagination, Autoplay]}
+              navigation
+              pagination={{ clickable: true }}
+              loop
+              dir="ltr"
+              autoplay={{
+                delay: 1500,           // التنقل كل 3 ثواني
+                disableOnInteraction: false, // يستمر في العمل بعد السحب اليدوي
+                pauseOnMouseEnter: true      // يوقف عند مرور الفأرة فوقه
+              }}
+              breakpoints={{
+                320:  { slidesPerView: 1, },
+                640:  { slidesPerView: 1 },
+                1024: { slidesPerView: 2},
+              }}
+            >
+              {PHASES_GALLERY.map((src, i) => (
+                <SwiperSlide key={i}>
+                  <img src={src} alt={`phase-${i + 1}`} className="w-full h-[42vh] md:h-[56vh] object-cover" />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
   );
-};
+}

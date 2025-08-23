@@ -1,3 +1,4 @@
+// Footer.jsx
 import React from 'react';
 import { motion } from "framer-motion";
 import { FaWhatsapp } from "react-icons/fa";
@@ -5,6 +6,20 @@ import { SiGooglemaps } from "react-icons/si";
 import { IoCallOutline } from "react-icons/io5";
 import Image from "../../public/images/logo.png";
 import { fadeIn } from "../utils/motion";
+
+const projectItems = [
+  { href: "/projects/ishbilia", label: "أشبيليا" },
+  { href: "/projects/omarycenter", label: "العمري سنتر" },
+  { href: "/projects/derahcenter", label: "مركز الديرة" },
+];
+
+const navLinks = [
+  { href: "/", label: "الرئيسية" },
+  { href: "/about", label: "مجموعة العمري" },
+  { href: "/projects", label: "مشاريعنا" },
+  { href: "/projects/initiative", label: "العمري لخدمة المجتمع" },
+  { href: "/contact", label: "تواصل معنا" },
+];
 
 const Footer = () => {
   return (
@@ -31,9 +46,10 @@ const Footer = () => {
               variants={fadeIn("up", 0.5)}
               className="text-gray-600 text-sm leading-relaxed mb-6"
             >
-              نهدف في مثري للخدمات البيئية إلى تقديم حلول عملية ومتكاملة لإدارة
-              المخلفات، بخدمة سريعة، موثوقة، وملتزمة بأعلى المعايير البيئية. رضا
-              العميل وجودة الخدمة هما أولويتنا.
+              تسعى مجموعة العمري العقارية إلى تحقيق الريادة في قطاع التطوير العقاري
+              داخل المملكة، من خلال مشاريع تنموية متكاملة وعصرية. نركز على جودة
+              التنفيذ، الراحة، والتزامنا بـ “نماء بانتماء” يعكس الولاء للمجتمع
+              الذي ننتمي إليه.
             </motion.p>
             <motion.div variants={fadeIn("up", 0.6)} className="flex gap-4">
               {/* Call */}
@@ -66,47 +82,43 @@ const Footer = () => {
             </motion.div>
           </motion.div>
 
-          {/* Links + Certificates */}
+          {/* Links + Projects */}
           <motion.div
             variants={fadeIn("left", 0.5)}
             className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-8"
           >
-            {/* Links Section */}
+            {/* Important Links */}
             <div>
               <h2 className="text-lg font-bold text-[#ab8e3a] mb-4">
                 روابط مهمة
               </h2>
               <ul className="space-y-3 text-[16px] text-gray-600 font-medium">
-                {["خدماتنا","من نحن","تواصل معنا","آراء العملاء"].map((item, idx) => (
+                {navLinks.map((link, idx) => (
                   <motion.li key={idx} whileHover={{ x: 5 }}>
                     <a
-                      href={`/#${item.replace(/\s/g, "").toLowerCase()}`}
+                      href={link.href}
                       className="hover:text-[#ab8e3a]/80 transition-colors cursor-pointer"
                     >
-                      {item}
+                      {link.label}
                     </a>
                   </motion.li>
                 ))}
               </ul>
             </div>
 
-            {/* Certifications Section */}
+            {/* Projects */}
             <div>
-              <h3 className="text-lg font-bold text-[#ab8e3a] mb-4">
-                الشهادات والرخص
-              </h3>
+              <h2 className="text-lg font-bold text-[#ab8e3a] mb-4">
+                مشاريعنا
+              </h2>
               <ul className="space-y-3 text-[16px] text-gray-600 font-medium">
-                {[
-                  "المركز الوطني لإدارة النفايات (MWAN)",
-                  "المركز الوطني للرقابة على الالتزام البيئي",
-                  "شهادة سلامة بيئية معتمدة"
-                ].map((cert, idx) => (
+                {projectItems.map((proj, idx) => (
                   <motion.li key={idx} whileHover={{ x: 5 }}>
                     <a
-                      href="#"
+                      href={proj.href}
                       className="hover:text-[#ab8e3a]/80 transition-colors cursor-pointer"
                     >
-                      {cert}
+                      {proj.label}
                     </a>
                   </motion.li>
                 ))}
@@ -125,7 +137,7 @@ const Footer = () => {
             className="flex flex-col md:flex-row justify-between items-center text-center gap-4 text-sm text-gray-600"
           >
             <span>
-              © {new Date().getFullYear()} مثرى للخدمات البيئية – جميع الحقوق محفوظة
+              © {new Date().getFullYear()} مجموعة العمري العقارية – جميع الحقوق محفوظة
             </span>
             <span>
               Developed by{" "}

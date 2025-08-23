@@ -73,14 +73,14 @@ const Navbar = () => {
               return (
                 <div 
                   key={idx} 
-                  className="relative projects-dropdown-container"
+                  className="relative projects-dropdown-container cursor-pointer"
                 >
                   <button
                     onClick={() => {
                       setShowDesktopProjectsMenu(!showDesktopProjectsMenu);
                       setActiveLink(link.href);
                     }}
-                    className={`flex items-center text-lg font-lg py-2 px-1 ${
+                    className={`flex items-center text-lg font-lg py-2 px-1 cursor-pointer ${
                       activeLink === link.href
                         ? "text-[#ab8e3a]"
                         : "text-gray-600 hover:text-gray-900"
