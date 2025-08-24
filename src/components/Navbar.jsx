@@ -22,6 +22,7 @@ const Navbar = () => {
     { href: "/about", label: "مجموعة العمري" },
     { href: "/projects", label: "مشاريعنا" },
     { href: "/projects/initiative", label: "العمري لخدمة المجتمع" },
+    { href: "/diwaniya", label: "ديوانية العمري" },
     { href: "/contact", label: "تواصل معنا" },
     
 
@@ -49,9 +50,7 @@ const Navbar = () => {
   return (
     <motion.nav
       viewport={{ once: true }}
-      className={`fixed top-0 left-0 right-0 z-50 h-[100px] text-right transition-all duration-300 ${
-        isScrolled ? "bg-white border-b border-gray-200" : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 h-[90px] text-right transition-all duration-300 bg-white border-b border-gray-200"`}
     >
       <div className="container mx-auto flex items-center justify-between h-full px-4 sm:px-6 lg:px-8">
         {/* Logo */}

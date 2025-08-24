@@ -10,6 +10,7 @@ import { Initiative } from './pages/Initiative'
 import Omarycenter from './pages/Omarycenter';
 import Derah from './pages/Derah'
 import ScrollToTop from './components/ScrollToTop'
+import Diwaniya from "./pages/Diwaniya"
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/projects/ishbilia" element={<Ishbilia/>} />
         <Route path="/projects/omarycenter" element={<Omarycenter/>} />
         <Route path="/projects/derahcenter" element={<Derah/>} />
+        <Route path="/diwaniya" element={<Diwaniya/>} />
       </Routes>
       </BrowserRouter>
     

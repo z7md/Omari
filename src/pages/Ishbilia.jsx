@@ -15,14 +15,6 @@ const MASTERPLAN_IMAGE = "/images/structure.png";
 
 const FACILITY_GALLERY = [
   {
-    title: "إشبيليا بوليفارد",
-    images: ["/images/Ish-B1.png","/images/Ish-B2.png",],
-  },
-  {
-    title: "فلل ووحدات سكنية",
-    images: ["/images/Ish-V1.png","/images/Ish-V2.png","/images/Ish-V3.png","/images/Ish-V4.png",],
-  },
-  {
     title: "مركز العمري الثقافي",
     images: ["/images/Ish-C1.png","/images/Ish-C2.png","/images/Ish-C3.png"],
   },
@@ -31,7 +23,15 @@ const FACILITY_GALLERY = [
     images: ["/images/Ish-M1.png","/images/Ish-M2.png","/images/Ish-M3.png","/images/Ish-M4.png",],
   },
   {
-    title: "إشبيليا بارك" ,
+    title: "إشبيليا بوليفارد",
+    images: ["/images/Ish-B1.png","/images/Ish-B2.png",],
+  },
+  {
+    title: "فلل ووحدات سكنية",
+    images: ["/images/Ish-V1.png","/images/Ish-V2.png","/images/Ish-V3.png","/images/Ish-V4.png",],
+  },
+  {
+    title: "حدائق" ,
     images: ["/images/Ish-P1.png","/images/Ish-P2.png","/images/Ish-P3.png","/images/Ish-P4.png","/images/Ish-P5.png",],
   },
 ];
@@ -129,12 +129,33 @@ export default function Ishbilia() {
       <Navbar />
 
       {/* HERO */}
-      <section className="relative w-full h-[100vh] md:h-[86vh]">
+      <section className="relative w-full h-[87vh] md:h-[87vh] mt-[90px]">
         <img src={HERO_IMAGE} alt="Project Hero" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 " />
         <div className="relative z-10 h-full flex items-center justify-center text-center text-white">
         </div>
       </section>
+
+
+
+      <div className="container mx-auto px-4 mt-[90px]">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-extrabold text-[#ab8e3a] mb-6 tracking-tight">
+                إشبيليا
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-medium">
+
+            مشروع تطوير عقاري ضخم عبارة عن ضاحية سكنية نموذجية متكاملة على مساحة تزيد عن 5 ملايين متر مربع تعود ملكيته لمجموعة ماجد العمري العقارية ويقع شمال مدينة بريدة بمنطقة القصيم
+
+يتكون المشروع من حي سكني راقٍ ومتكامل يشتمل على فلل ووحدات سكنية متنوعة ومشاريع تعليمية نموذجية متكاملة تشمل كليات أهلية ومدارس نموذجية وعدد من الحدائق والمساجد وجامع وخدمات وأراضٍ تجارية وسكنية مطورة بخدمات متكاملة
+
+ويشتمل المشروع أيضًا على جامع كبير وسط الحي ومركز ثقافي ومجمع للخدمات الإدارية ستطوره المجموعة كمشروع وقف باسم مركز العمري الثقافي
+
+كما سيتم تطوير المشروع على مراحل بالتعاون مع الشركات المتخصصة محليًا وعالميًا وسيتم التعاون مع وزارة الإسكان وصندوق التنمية العقارية في السعودية لدعم المشروع وتقديم المنتجات السكنية المدعومة
+              
+            </p>
+          </div>
+          </div>
 
       <section dir="rtl" className="w-[92%] md:w-[86%] mx-auto py-10 md:py-16">
         {/* 1) موقع المشروع وسهولة الوصول والطرق المحيطة */}

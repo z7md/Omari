@@ -30,7 +30,7 @@ const ProjectsSection = () => {
       title: 'العمري سنتر',
       location: 'طريق أبو بكر الصديق',
       type: 'تجاري',
-      status: 'متاح للحجز',
+      status: '',
       image: project2,
       description: 'برج تجاري متطور يضم مكاتب ومحلات تجارية ومطاعم بتصميم عصري وموقع استراتيجي',
       features: ['30 طابق', 'مكاتب ذكية', 'مركز تسوق', 'مواقف متعددة الطوابق']
@@ -39,7 +39,7 @@ const ProjectsSection = () => {
       id: 3,
       href:"/projects/initiative",
       title: 'العمري لخدمة المجتمع',
-      location: 'شرق بريدة',
+      location: 'بريدة',
       type: 'أنساني',
       status: '',
       image: project3,
@@ -52,7 +52,7 @@ const ProjectsSection = () => {
       title: 'مركز الديرة',
       location: 'جنوب بريدة',
       type: 'تجاري',
-      status: 'متاح للحجز',
+      status: '',
       image: project4,
       description: 'مشروع مختلط يجمع بين الوحدات السكنية والتجارية والترفيهية في تصميم واحد متكامل',
       features: ['استخدام مختلط', 'تقنيات ذكية', 'صديق للبيئة', 'مرافق متكاملة']

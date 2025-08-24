@@ -54,17 +54,22 @@ const Omarycenter = () => {
     <div className="min-h-screen bg-background">
       {/* Navigation */}
       <Navbar />
-      <Hero video="OmaryCenter" />
+      <Hero video="OmaryCenter"  />
 
       {/* Overview */}
       <section className="py-16 bg-cream/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-extrabold text-[#ab8e3a] mb-6 tracking-tight">
-              لمحة عامة عن المشروع
+               العمري سنتر
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-medium">
-              مشروع تطويري بارز يهدف إلى دعم قطاع الأعمال المحلي وخلق فرص استثمارية متميزة في منطقة القصيم
+             
+            عبارة عن مركز تجاري من أرقى المراكز التجارية في مدينة بريدة ، وقد تم إنشاؤه وتصميمه على أحدث الطرز المعمارية، بمساحة 30 ألف متر مربع، 
+ويحتوي على إحدى أفضل الماركات المحلية والعالمية
+
+يوجد في المجمع 300 موقف سيارة , ويضم حاليًا واحدة من أكبر صالات الألعاب للأطفال (ملاهي ووش)، بالإضافة إلى هايبر ماركت سبت، وعدد من العلامات التجارية المعروفة مثل رد تاغ، آر آند بي، آبل بيز، باسكن روبنز، عبدالصمد القرشي، كما يحتوي على مركز تدريب وتعليمي كبير تابع لجامعة الراجحي. يتميز العمري سنتر بموقعه الاستراتيجي على طريق أبي بكر الصديق والذي يعد حالياً احد أهم الشوارع الرئيسية في مدينة بريدة وأكثرها ازدحاما ً , مقابل كليات التقنية للبنين وكليات التقنية للبنات، وخلفه كليات التربية للبنات، كما يقع مقابل ممشى الملك عبدالله، وبالقرب من أهم أحياء شمال بريدة حيث القوة الشرائية العالية
+              
             </p>
           </div>
 
@@ -84,44 +89,7 @@ const Omarycenter = () => {
         </div>
       </section>
 
-      {/* Project Phases */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className=" text-navy text-center text-4xl font-extrabold text-[#ab8e3a] mb-6 tracking-tight">
-            مراحل إنجاز المشروع
-          </h2>
-
-          <div className="max-w-4xl mx-auto">
-            {phases.map((phase, index) => (
-              <div key={index} className="relative mb-8 last:mb-0">
-                <div className="flex items-start gap-6">
-                  <div className="flex-shrink-0 w-4 h-4 bg-[#ab8e3a] rounded-full mt-2 relative">
-                    {index < phases.length - 1 && (
-                      <div className="absolute top-4 left-1/2 transform -translate-x-1/2 w-0.5 h-16 bg-[#ab8e3a]/30"></div>
-                    )}
-                  </div>
-                  <Card className="flex-1 bg-gradient-card border-[#ab8e3a]/20 hover:shadow-[#ab8e3a] transition-all duration-300">
-                    <CardContent className="p-6">
-                      <div className="flex flex-wrap items-center justify-between mb-4">
-                        <h3 className="text-2xl font-bold text-navy text-[#ab8e3a]">{phase.title}</h3>
-                        <div className="flex items-center gap-4">
-                          <Badge variant="outline" className="border-[#ab8e3a] text-[#ab8e3a] font-medium text-md">
-                            {phase.year}
-                          </Badge>
-                          <Badge className="bg-[#ab8e3a] text-navy font-medium text-md text-white">
-                            {phase.status}
-                          </Badge>
-                        </div>
-                      </div>
-                      <p className="text-muted-foreground leading-relaxed font-medium text-[#ab8e3a] text-md">{phase.description}</p>
-                    </CardContent>
-                  </Card>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+    
 
 
       {/* Contact Section */}

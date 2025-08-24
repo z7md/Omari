@@ -74,7 +74,7 @@ export default function ProjectAldeerahPage() {
       <Navbar />
 
       {/* HERO */}
-      <section className="relative w-full h-[70vh] md:h-[82vh]">
+      <section className="relative w-full h-[87vh] md:h-[87vh] mt-[90px]">
         <img
           src={HERO_IMAGE}
           alt="Aldeerah Center — B-IT Fitness Facade"
@@ -84,6 +84,22 @@ export default function ProjectAldeerahPage() {
         <div className="relative z-10 h-full flex items-end md:items-center justify-center">
         </div>
       </section>
+
+      <div className="container mx-auto px-4 mt-[90px]">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-extrabold text-[#ab8e3a] mb-6 tracking-tight">
+                مركز الديرة
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-medium">
+
+            مشروع مركز الديرة ضمن مجموعة العمري
+              يوفر واجهة تجارية متميزة مع إمكانية تقسيم المساحات إلى أكثر من قاعة
+              تشغيل، إضافةً إلى مواقف واسعة أمامية وخلفية، وواجهة زجاجية بارتفاعٍ كبير
+              تمنح حضورًا بصريًا قويًا للعلامة. الموقع استراتيجي على محور رئيسي في
+              بريدة، ما يعزز الوصول والحركة التجارية.
+           </p>
+          </div>
+          </div>
 
       {/* CONTENT */}
       <section dir="rtl" className="w-[92%] md:w-[86%] mx-auto py-10 md:py-16">
@@ -109,15 +125,6 @@ export default function ProjectAldeerahPage() {
         {/* وصف عام */}
         <div className="mt-8 md:mt-12 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
           <div>
-            <h2 className="text-2xl md:text-3xl font-bold mb-3 text-[#ab8e3a]">نبذة عن المشروع</h2>
-            <p className="text-gray-700 leading-8">
-              مشروع <span className="font-semibold">مركز الديرة</span> ضمن مجموعة العمري
-              يوفر واجهة تجارية متميزة مع إمكانية تقسيم المساحات إلى أكثر من قاعة
-              تشغيل، إضافةً إلى مواقف واسعة أمامية وخلفية، وواجهة زجاجية بارتفاعٍ كبير
-              تمنح حضورًا بصريًا قويًا للعلامة. الموقع استراتيجي على محور رئيسي في
-              بريدة، ما يعزز الوصول والحركة التجارية.
-            </p>
-
             <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3">
               <Card className="rounded-2xl">
                 <CardContent className="p-4">

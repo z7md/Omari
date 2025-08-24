@@ -62,7 +62,7 @@ export const Projects = () => {
       <Navbar />
 
       {/* عمود تقدم التمرير */}
-      <div className="fixed top-0 right-0 w-1 h-full bg-gray-200 z-50">
+      <div className="fixed top-0 right-0 w-1 h-full bg-gray-200 z-50 mt-[90px]">
         <div
           className="w-full bg-[#ab8e3a] transition-all"
           style={{ height: `${scrollProgress}%` }}
