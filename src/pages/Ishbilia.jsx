@@ -23,7 +23,7 @@ const FACILITY_GALLERY = [
     images: ["/images/Ish-M1.png","/images/Ish-M2.png","/images/Ish-M3.png","/images/Ish-M4.png",],
   },
   {
-    title: "إشبيليا بوليفارد",
+    title: "بوليفارد",
     images: ["/images/Ish-B1.png","/images/Ish-B2.png",],
   },
   {
