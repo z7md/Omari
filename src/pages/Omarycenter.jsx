@@ -7,6 +7,12 @@ import { Button } from '../components/ui/Button';
 import { staggerContainer, textVariant, fadeIn } from "../utils/motion";
 import { motion } from "framer-motion";
 import { Badge } from '../components/ui/Badge';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
 import {
   Building2,
   MapPin,
@@ -33,25 +39,32 @@ const Omarycenter = () => {
     { icon: Star, title: "مسجد", description: "مسجد مجهز بالكامل" },
     { icon: Users, title: "خدمات متكاملة", description: "دعم تقني وحضوري" }
   ];
-
-  const phases = [
-    {
-      title: "المرحلة الأولى",
-      year: "2015",
-      description: "افتتاح المشروع بحضور الأمير فيصل بن مشعل",
-      status: "مكتمل"
-    },
-    {
-      title: "المرحلة الثانية",
-      year: "2016+",
-      description: "التوسعة لتلبية الطلب المتزايد من الشركات",
-      status: "مكتمل"
-    }
+  const SectionTitle = ({ children }) => (
+    <h2 className="text-2xl md:text-3xl font-bold mb-4 text-[#ab8e3a]">{children}</h2>
+  );
+  const PHASES_GALLERY = [
+    "/images/omariCen1.JPG",
+    "/images/omariCen2.JPG",
+    "/images/omariCen3.jpg",
+  
   ];
 
 
   return (
     <div className="min-h-screen bg-background">
+                    <style>{`
+        .swiper-button-next,
+        .swiper-button-prev {
+          color: #ab8e3a;
+        }
+        .swiper-pagination-bullet {
+          background: #d1d5db;
+          opacity: 1;
+        }
+        .swiper-pagination-bullet-active {
+          background: #ab8e3a;
+        }
+      `}</style>
       {/* Navigation */}
       <Navbar />
       <Hero video="OmaryCenter"  />
@@ -126,6 +139,32 @@ const Omarycenter = () => {
           </motion.a>
         </motion.section>
       </div>
+      <div className="mt-12 mx-10 m-auto">
+          <SectionTitle>صور للمشروع</SectionTitle>
+          <div className="rounded-2xl overflow-hidden border shadow-sm">
+            <Swiper
+              modules={[Navigation, Pagination, Autoplay]}
+              navigation
+              pagination={{ clickable: true }}
+              loop
+              dir="ltr"
+              autoplay={{
+                delay: 1500,           // التنقل كل 3 ثواني
+                disableOnInteraction: false, // يستمر في العمل بعد السحب اليدوي
+                pauseOnMouseEnter: true      // يوقف عند مرور الفأرة فوقه
+              }}
+              breakpoints={{
+                320:  { slidesPerView: 1, },
+              }}
+            >
+              {PHASES_GALLERY.map((src, i) => (
+                <SwiperSlide key={i}>
+                  <img src={src} alt={`phase-${i + 1}`} className="w-full h-[42vh] md:h-[56vh] object-cover" />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+        </div>
 
       <Footer />
     </div>

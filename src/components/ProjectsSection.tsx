@@ -8,7 +8,7 @@ import { GiPositionMarker } from "react-icons/gi";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import project1 from "../../public/images/ishbilia.png";
 import project2 from "../../public/images/omaryCenter.png";
-import project3 from "../../public/images/social.png";
+import project3 from "../../public/images/Al-Omari In.png";
 import project4 from "../../public/images/derah1.png";
 
 const ProjectsSection = () => {
@@ -93,11 +93,11 @@ const ProjectsSection = () => {
               key={project.id}
               className="group overflow-hidden shadow-lg hover:shadow-[#ab8e3a]/30 transition-shadow duration-300"
             >
-              <div className="relative overflow-hidden">
+              <div className="relative overflow-hidden ">
                 <img 
                   src={project.image} 
                   alt={project.title}
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-64  object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute top-4 right-4">
                   <Badge className={`${getStatusColor(project.status)} text-white`}>
@@ -122,21 +122,6 @@ const ProjectsSection = () => {
                   {project.title}
                 </h3>
                 
-                {/* <p className="text-gray-700 mb-4 leading-relaxed">
-                  {project.description}
-                </p> */}
-                
-                {/* <div className="flex flex-wrap gap-2 mb-6">
-                  {project.features.map((feature, idx) => (
-                    <Badge
-                      key={idx}
-                      variant="outline"
-                      className="text-xs border-[#ab8e3a] text-[#ab8e3a]"
-                    >
-                      {feature}
-                    </Badge>
-                  ))}
-                </div> */}
                 
                 {/* Details Button with left arrow */}
                 <Button 

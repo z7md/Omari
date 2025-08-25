@@ -3,15 +3,22 @@ import React from 'react';
 import sampleVideo from "../../public/images/home.mp4";
 import sampleVideo1 from "../../public/images/HomeVid.mov";
 import sampleVideo2 from "../../public/images/OmaryCenterVid.mov";
-import centerImage from "../../public/images/logo.png"; // example image
+import centerImage from "../../public/images/Al-omari Group1.png"; // example image
+import centerImage1 from "../../public/images/Al-omari Center.png"; // example image
+
 
 const VIDEO_MAP = {
   home: sampleVideo1,   // mp4
   OmaryCenter: sampleVideo2, // mov
 };
+const PHOTO_MAP = {
+  home: centerImage,   // mp4
+  OmaryCenter: centerImage1, // mov
+};
 
-function Hero({ video = "home", overlay = 0.3 }) {
+function Hero({ video = "home", overlay = 0.3, }) {
   const selectedSrc = VIDEO_MAP[video] || video;
+  const selectedPhoto = PHOTO_MAP[video] || video;
 
   return (
     <div className="relative w-full h-[87vh] overflow-hidden mt-[90px]">
@@ -34,9 +41,9 @@ function Hero({ video = "home", overlay = 0.3 }) {
       {/* Center Image */}
       <div className="absolute inset-0 flex items-center justify-center">
         <img
-          src={centerImage}
+          src={selectedPhoto}
           alt="Center Logo"
-          className="w-48 h-48 object-contain"
+          className="w-58 h-58 object-contain"
         />
       </div>
     </div>

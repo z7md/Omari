@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 import { HiMenu, HiX, HiChevronDown } from "react-icons/hi";
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/motion";
-import logo from "../../public/images/logo.png";
+// import logo from "../../public/images/logo.png";
+import logo from "../../public/images/Al-Omari group1.png";
+
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
