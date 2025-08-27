@@ -3,7 +3,7 @@ import React from 'react';
 import sampleVideo from "../../public/images/home.mp4";
 import sampleVideo1 from "../../public/images/HomeVid.mov";
 import sampleVideo2 from "../../public/images/OmaryCenterVid.mov";
-import centerImage from "../../public/images/Al-omariGroup1.png"; // example image
+import centerImage from "../../public/images/Al-Omarigroup1.png"; // example image
 import centerImage1 from "../../public/images/OmaryGC1.png"; // example image
 
 
