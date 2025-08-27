@@ -8,7 +8,7 @@ import { GiPositionMarker } from "react-icons/gi";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import project1 from "../../public/images/ishbilia.png";
 import project2 from "../../public/images/omaryCenter.png";
-import project3 from "../../public/images/Al-Omari In.png";
+import project3 from "../../public/images/Al-OmariIn.png";
 import project4 from "../../public/images/derah1.png";
 
 const ProjectsSection = () => {

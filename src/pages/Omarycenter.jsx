@@ -40,19 +40,19 @@ const Omarycenter = () => {
     { icon: Users, title: "خدمات متكاملة", description: "دعم تقني وحضوري" }
   ];
   const SectionTitle = ({ children }) => (
-    <h2 className="text-2xl md:text-3xl font-bold mb-4 text-[#ab8e3a]">{children}</h2>
+    <h2 className="text-3xl md:text-4xl font-bold mb-6 mr-4 text-[#ab8e3a]">{children}</h2>
   );
   const PHASES_GALLERY = [
     "/images/omariCen1.JPG",
     "/images/omariCen2.JPG",
     "/images/omariCen3.jpg",
-  
+
   ];
 
 
   return (
     <div className="min-h-screen bg-background">
-                    <style>{`
+      <style>{`
         .swiper-button-next,
         .swiper-button-prev {
           color: #ab8e3a;
@@ -67,22 +67,22 @@ const Omarycenter = () => {
       `}</style>
       {/* Navigation */}
       <Navbar />
-      <Hero video="OmaryCenter"  />
+      <Hero video="OmaryCenter" />
 
       {/* Overview */}
       <section className="py-16 bg-cream/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-extrabold text-[#ab8e3a] mb-6 tracking-tight">
-               العمري سنتر
+              العمري سنتر
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-medium">
-             
-            عبارة عن مركز تجاري من أرقى المراكز التجارية في مدينة بريدة ، وقد تم إنشاؤه وتصميمه على أحدث الطرز المعمارية، بمساحة 30 ألف متر مربع، 
-ويحتوي على إحدى أفضل الماركات المحلية والعالمية
 
-يوجد في المجمع 300 موقف سيارة , ويضم حاليًا واحدة من أكبر صالات الألعاب للأطفال (ملاهي ووش)، بالإضافة إلى هايبر ماركت سبت، وعدد من العلامات التجارية المعروفة مثل رد تاغ، آر آند بي، آبل بيز، باسكن روبنز، عبدالصمد القرشي، كما يحتوي على مركز تدريب وتعليمي كبير تابع لجامعة الراجحي. يتميز العمري سنتر بموقعه الاستراتيجي على طريق أبي بكر الصديق والذي يعد حالياً احد أهم الشوارع الرئيسية في مدينة بريدة وأكثرها ازدحاما ً , مقابل كليات التقنية للبنين وكليات التقنية للبنات، وخلفه كليات التربية للبنات، كما يقع مقابل ممشى الملك عبدالله، وبالقرب من أهم أحياء شمال بريدة حيث القوة الشرائية العالية
-              
+              عبارة عن مركز تجاري من أرقى المراكز التجارية في مدينة بريدة ، وقد تم إنشاؤه وتصميمه على أحدث الطرز المعمارية، بمساحة 30 ألف متر مربع،
+              ويحتوي على إحدى أفضل الماركات المحلية والعالمية
+
+              يوجد في المجمع 300 موقف سيارة , ويضم حاليًا واحدة من أكبر صالات الألعاب للأطفال (ملاهي ووش)، بالإضافة إلى هايبر ماركت سبت، وعدد من العلامات التجارية المعروفة مثل رد تاغ، آر آند بي، آبل بيز، باسكن روبنز، عبدالصمد القرشي، كما يحتوي على مركز تدريب وتعليمي كبير تابع لجامعة الراجحي. يتميز العمري سنتر بموقعه الاستراتيجي على طريق أبي بكر الصديق والذي يعد حالياً احد أهم الشوارع الرئيسية في مدينة بريدة وأكثرها ازدحاما ً , مقابل كليات التقنية للبنين وكليات التقنية للبنات، وخلفه كليات التربية للبنات، كما يقع مقابل ممشى الملك عبدالله، وبالقرب من أهم أحياء شمال بريدة حيث القوة الشرائية العالية
+
             </p>
           </div>
 
@@ -102,8 +102,36 @@ const Omarycenter = () => {
         </div>
       </section>
 
-    
 
+
+
+
+      <div className="mt-12 mx-auto  lg:w-[1024px]">
+        <SectionTitle>صور للمشروع</SectionTitle>
+        <div className="rounded-2xl overflow-hidden border shadow-sm">
+          <Swiper
+            modules={[Navigation, Pagination, Autoplay]}
+            navigation
+            pagination={{ clickable: true }}
+            loop
+            dir="ltr"
+            autoplay={{
+              delay: 1500,           // التنقل كل 3 ثواني
+              disableOnInteraction: false, // يستمر في العمل بعد السحب اليدوي
+              pauseOnMouseEnter: true      // يوقف عند مرور الفأرة فوقه
+            }}
+            breakpoints={{
+              320: { slidesPerView: 1, },
+            }}
+          >
+            {PHASES_GALLERY.map((src, i) => (
+              <SwiperSlide key={i}>
+                <img src={src} alt={`phase-${i + 1}`} className="w-full h-[42vh] md:h-[56vh] object-cover" />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      </div>
 
       {/* Contact Section */}
       <div className="flex justify-center items-center">
@@ -126,7 +154,7 @@ const Omarycenter = () => {
             variants={fadeIn("up", 0.7)}
             className="text-xl sm:text-2xl mb-6"
           >
-          لأي استفسار أو شراكة، يسعدنا تواصلكم عبر صفحة التواصل.
+            لأي استفسار أو شراكة، يسعدنا تواصلكم عبر صفحة التواصل.
 
 
           </motion.p>
@@ -139,32 +167,6 @@ const Omarycenter = () => {
           </motion.a>
         </motion.section>
       </div>
-      <div className="mt-12 mx-10 m-auto">
-          <SectionTitle>صور للمشروع</SectionTitle>
-          <div className="rounded-2xl overflow-hidden border shadow-sm">
-            <Swiper
-              modules={[Navigation, Pagination, Autoplay]}
-              navigation
-              pagination={{ clickable: true }}
-              loop
-              dir="ltr"
-              autoplay={{
-                delay: 1500,           // التنقل كل 3 ثواني
-                disableOnInteraction: false, // يستمر في العمل بعد السحب اليدوي
-                pauseOnMouseEnter: true      // يوقف عند مرور الفأرة فوقه
-              }}
-              breakpoints={{
-                320:  { slidesPerView: 1, },
-              }}
-            >
-              {PHASES_GALLERY.map((src, i) => (
-                <SwiperSlide key={i}>
-                  <img src={src} alt={`phase-${i + 1}`} className="w-full h-[42vh] md:h-[56vh] object-cover" />
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
-        </div>
 
       <Footer />
     </div>
