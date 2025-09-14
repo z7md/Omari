@@ -9,8 +9,8 @@ import { motion } from "framer-motion";
 import { Badge } from '../components/ui/Badge';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import HERO_IMAGE_MD from "../../public/images/alderah11.jpg";
-import HERO_IMAGE from "../../public/images/alderah12.png";
+import HERO_IMAGE_MD from "../../public/images/alderah11.webp";
+import HERO_IMAGE from "../../public/images/alderah12.webp";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -30,8 +30,8 @@ import {
   ArrowLeft,
   Star
 } from "lucide-react";
-import projectHero from "../../public/images/omaryCenter.png";
-import patternBg from "../../public/images/omaryCenter.png";
+import projectHero from "../../public/images/omaryCenter.webp";
+import patternBg from "../../public/images/omaryCenter.webp";
 import { Link } from "react-router-dom";
 
 const ProjectAldeerahPage = () => {
@@ -63,9 +63,9 @@ const ProjectAldeerahPage = () => {
   );
 
   const PHASES_GALLERY = [
-    "/images/alderah13.jpeg",
-    "/images/alderah14.jpeg",
-    "/images/alderah15.jpeg",
+    "/images/alderah13.webp",
+    "/images/alderah14.webp",
+    "/images/alderah15.webp",
   ];
 
   return (
@@ -141,54 +141,43 @@ const ProjectAldeerahPage = () => {
         </div>
       </motion.section>
 
-      {/* Gallery with motion */}
-      <motion.section
-        className="pb-16 bg-cream/50"
-        variants={staggerContainer}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: false, amount: 0.15 }}
-      >
-        <div className="container mx-auto px-4">
-          <motion.div
-            variants={textVariant(0.1)}
-            className="mt-12 mx-auto lg:w-[1024px]"
-          >
-            <SectionTitle>صور للمشروع</SectionTitle>
-          </motion.div>
+{/* Gallery with motion — vertical stack (each image has its own border) */}
+<motion.section
+  className="pb-16 bg-cream/50"
+  variants={staggerContainer}
+  initial="hidden"
+  whileInView="show"
+  viewport={{ once: true, amount: 0.15 }}
+>
+  <div className="container mx-auto px-4">
+    <motion.div
+      variants={textVariant(0.1)}
+      className="mt-12 mx-auto lg:w-[1024px]"
+    >
+      <SectionTitle>صور للمشروع</SectionTitle>
+    </motion.div>
 
-          <motion.div
-            variants={fadeIn("up", 0.2)}
-            className="rounded-2xl overflow-hidden border shadow-sm"
-          >
-            <Swiper
-              modules={[Navigation, Pagination, Autoplay]}
-              navigation
-              pagination={{ clickable: true }}
-              loop
-              dir="ltr"
-              autoplay={{
-                delay: 1500,
-                disableOnInteraction: false,
-                pauseOnMouseEnter: true
-              }}
-              breakpoints={{
-                320: { slidesPerView: 1 }
-              }}
-            >
-              {PHASES_GALLERY.map((src, i) => (
-                <SwiperSlide key={i}>
-                  <img
-                    src={src}
-                    alt={`phase-${i + 1}`}
-                    className="w-full h-[42vh] md:h-[56vh] object-cover"
-                  />
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </motion.div>
+    <motion.div
+      variants={fadeIn("up", 0.2)}
+      className="flex flex-col gap-6"
+    >
+      {PHASES_GALLERY.map((src, i) => (
+        <div
+          key={i}
+          className="border-[#ab8e3a] border-2 rounded-xl shadow-sm overflow-hidden"
+        >
+          <img
+            src={src}
+            alt={`phase-${i + 1}`}
+            className="w-full h-auto max-h-[70vh] object-cover"
+            loading="lazy"
+          />
         </div>
-      </motion.section>
+      ))}
+    </motion.div>
+  </div>
+</motion.section>
+
 
       {/* Features with motion */}
       <motion.section
@@ -208,7 +197,7 @@ const ProjectAldeerahPage = () => {
                 key={index}
                 variants={fadeIn("up", 0.1 + index * 0.08)}
               >
-                <Card className="group shadow-[#ab8e3a] transition-all duration-300 bg-gradient-card border-[#ab8e3a]/20 hover:-translate-y-1 hover:shadow-lg">
+                <Card className="group shadow-[#ab8e3a] h-[274px] transition-all duration-300 bg-gradient-card border-[#ab8e3a]/20 hover:-translate-y-1 hover:shadow-lg">
                   <CardContent className="p-8 text-center">
                     <div className="w-16 h-16 mx-auto mb-6 bg-[#ab8e3a] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                       <feature.icon className="w-8 h-8 text-white" />

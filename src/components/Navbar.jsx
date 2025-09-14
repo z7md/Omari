@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import { HiMenu, HiX, HiChevronDown } from "react-icons/hi";
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/motion";
-// import logo from "../../public/images/logo.png";
-import logo from "../../public/images/Al-Omarigroup1.png";
+// import logo from "../../public/images/logo.webp";
+import logo from "../../public/images/Al-Omarigroup1.webp";
 
 
 const Navbar = () => {
@@ -17,6 +17,7 @@ const Navbar = () => {
     { href: "/projects/ishbilia", label: "أشبيليا" },
     { href: "/projects/omarycenter", label: "العمري سنتر" },
     { href: "/projects/derahcenter", label: "مركز الديرة" },
+    { href: "/projects/carcenter", label: "مركز السيارة" },
   ];
 
   const navLinks = [

@@ -10,25 +10,25 @@ const projects = [
   {
     id: 1,
     title: "Mira Group Brand Design",
-    image: "./images/ishbilia.png",
+    image: "./images/ishbilia.webp",
     link: "https://www.behance.net/gallery/226248767/Mira-group-brand-design",
   },
   {
     id: 2,
     title: "Project Two",
-    image: "./images/omaryCenter.png",
+    image: "./images/omaryCenter.webp",
     link: "#",
   },
   {
     id: 3,
     title: "Project Three",
-    image: "/images/projects/project-3.jpg",
+    image: "/images/projects/project-3.webp",
     link: "#",
   },
   {
     id: 4,
     title: "Project Four",
-    image: "/images/projects/project-4.jpg",
+    image: "/images/projects/project-4.webp",
     link: "#",
   },
   // أضف المزيد من العناصر حسب الحاجة

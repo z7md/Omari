@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { staggerContainer, textVariant, fadeIn } from "../utils/motion";
-import OmariLogo from "../../public/images/centerlogo.png";
-import IshbiliaLogo from "../../public/images/ishlogo.png";
-import MajidPhoto from "../../public/images/boss.png";
+import OmariLogo from "../../public/images/centerlogo.webp";
+import IshbiliaLogo from "../../public/images/ishlogo.webp";
+import MajidPhoto from "../../public/images/boss.webp";
 
 export const About = () => {
   const [isMobile, setIsMobile] = useState(false);

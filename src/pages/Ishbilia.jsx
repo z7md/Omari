@@ -9,49 +9,49 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 /** عدّل المسارات حسب صورك داخل /public/images */
-const HERO_IMAGE = "/images/Ish-Home.png";
-const ACCESS_IMAGE = "/images/roads.png";
-const MASTERPLAN_IMAGE = "/images/structure.png";
+const HERO_IMAGE = "/images/Ish-Home.webp";
+const ACCESS_IMAGE = "/images/roads.webp";
+const MASTERPLAN_IMAGE = "/images/structure.webp";
 
 const FACILITY_GALLERY = [
   {
     title: "مركز العمري الثقافي",
-    images: ["/images/Ish-C1.png","/images/Ish-C2.png","/images/Ish-C3.png"],
+    images: ["/images/Ish-C1.webp","/images/Ish-C2.webp","/images/Ish-C3.webp"],
   },
   {
     title: "جامع الشيخ ناصر بن سليمان العمري رحمه الله" ,
-    images: ["/images/Ish-M1.png","/images/Ish-M2.png","/images/Ish-M3.png","/images/Ish-M4.png",],
+    images: ["/images/Ish-M1.webp","/images/Ish-M2.webp","/images/Ish-M3.webp","/images/Ish-M4.webp",],
   },
   {
     title: "بوليفارد",
-    images: ["/images/Ish-B1.png","/images/Ish-B2.png",],
+    images: ["/images/Ish-B1.webp","/images/Ish-B2.webp",],
   },
   {
     title: "فلل ووحدات سكنية",
-    images: ["/images/Ish-V1.png","/images/Ish-V2.png","/images/Ish-V3.png","/images/Ish-V4.png",],
+    images: ["/images/Ish-V1.webp","/images/Ish-V2.webp","/images/Ish-V3.webp","/images/Ish-V4.webp",],
   },
   {
     title: "حدائق" ,
-    images: ["/images/Ish-P1.png","/images/Ish-P2.png","/images/Ish-P3.png","/images/Ish-P4.png","/images/Ish-P5.png",],
+    images: ["/images/Ish-P1.webp","/images/Ish-P2.webp","/images/Ish-P3.webp","/images/Ish-P4.webp","/images/Ish-P5.webp",],
   },
 ];
 
 const PHASES_GALLERY = [
-  "/images/Ph1.png",
-  "/images/Ph2.png",
-  "/images/Ph3.png",
-  "/images/Ph4.png",
-  "/images/Ph5.png",
-  "/images/Ph6.png",
-  "/images/Ph7.png",
-  "/images/Ph8.png",
-  "/images/Ph9.png",
-  "/images/Ph10.png",
-  "/images/Ph11.png",
-  "/images/Ph12.png",
-  "/images/Ph13.png",
-  "/images/Ph14.png",
-  "/images/Ph15.png",
+  "/images/Ph1.webp",
+  "/images/Ph2.webp",
+  "/images/Ph3.webp",
+  "/images/Ph4.webp",
+  "/images/Ph5.webp",
+  "/images/Ph6.webp",
+  "/images/Ph7.webp",
+  "/images/Ph8.webp",
+  "/images/Ph9.webp",
+  "/images/Ph10.webp",
+  "/images/Ph11.webp",
+  "/images/Ph12.webp",
+  "/images/Ph13.webp",
+  "/images/Ph14.webp",
+  "/images/Ph15.webp",
 
 ];
 

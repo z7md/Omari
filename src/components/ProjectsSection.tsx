@@ -6,10 +6,11 @@ import { Link } from 'react-router-dom';
 import { HiLocationMarker, HiArrowLeft } from 'react-icons/hi';
 import { GiPositionMarker } from "react-icons/gi";
 import { FaMapMarkerAlt } from "react-icons/fa";
-import project1 from "../../public/images/ishbilia.png";
-import project2 from "../../public/images/omaryCenter.png";
-import project3 from "../../public/images/Al-OmariIn.png";
-import project4 from "../../public/images/derah1.png";
+import project1 from "../../public/images/ishbilia.webp";
+import project2 from "../../public/images/omaryCenter.webp";
+import project3 from "../../public/images/Al-OmariIn.webp";
+import project4 from "../../public/images/alderahFinal.webp";
+import project5 from "../../public/images/carcenter.webp";
 
 const ProjectsSection = () => {
   const projects = [
@@ -21,8 +22,6 @@ const ProjectsSection = () => {
       type: 'سكني',
       status: 'قيد الانشاء',
       image: project1,
-      description: 'مجمع سكني فاخر يحتوي على 200 وحدة سكنية متنوعة مع جميع الخدمات والمرافق الحديثة',
-      features: ['مساحات خضراء', 'نادي رياضي', 'أمن 24 ساعة', 'مواقف كافية']
     },
     {
       id: 2,
@@ -32,8 +31,6 @@ const ProjectsSection = () => {
       type: 'تجاري',
       status: '',
       image: project2,
-      description: 'برج تجاري متطور يضم مكاتب ومحلات تجارية ومطاعم بتصميم عصري وموقع استراتيجي',
-      features: ['30 طابق', 'مكاتب ذكية', 'مركز تسوق', 'مواقف متعددة الطوابق']
     },
     {
       id: 3,
@@ -43,8 +40,6 @@ const ProjectsSection = () => {
       type: 'أنساني',
       status: '',
       image: project3,
-      description: "مؤسسة غير ربحية",
-      features: ['مبادرات']
     },
     {
       id: 4,
@@ -54,8 +49,15 @@ const ProjectsSection = () => {
       type: 'تجاري',
       status: '',
       image: project4,
-      description: 'مشروع مختلط يجمع بين الوحدات السكنية والتجارية والترفيهية في تصميم واحد متكامل',
-      features: ['استخدام مختلط', 'تقنيات ذكية', 'صديق للبيئة', 'مرافق متكاملة']
+    },
+    {
+      id: 4,
+      href:"/projects/carcenter",
+      title: 'مركز السيارة',
+      location: 'بريدة',
+      type: 'تجاري',
+      status: '',
+      image: project5,
     }
   ];
 

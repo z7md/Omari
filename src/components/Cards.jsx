@@ -17,13 +17,13 @@ function Cards() {
         <div className="relative my-12 w-full text-center">
           <ul className="flex flex-col md:flex-row mb-6">
             <CardItem
-              src="./images/ishbilia.png"
+              src="./images/ishbilia.webp"
               text="ضاحية سكنية نموذجية"
               label="ضاحية أشبيليا"
               path="/projects/Ishbilia"
             />
             <CardItem
-              src="./images/omaryCenter.png"
+              src="./images/omaryCenter.webp"
               text="العمري سنتر"
               label="العمري سنتر"
               path="/projects/omarycenter"
@@ -31,19 +31,19 @@ function Cards() {
           </ul>
           <ul className="flex flex-col md:flex-row">
             <CardItem
-              src="./images/social.png"
+              src="./images/social.webp"
               text="العمري لخدمة المجتمع"
               label="العمري لخدمة المجتمع"
               path="/projects/Initiative"
             />
             {/* <CardItem
-              src="./images/img-4.jpg"
+              src="./images/img-4.webp"
               text="Experience Football on Top of the Himilayan Mountains"
               label="Adventure"
               path="/products"
             />*/}
             <CardItem
-              src="./images/derah1.png"
+              src="./images/derah1.webp"
               text="مركز الديرة"
               label="مركز الديرة"
               path="/projects/derahcenter"

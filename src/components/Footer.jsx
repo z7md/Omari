@@ -4,13 +4,14 @@ import { motion } from "framer-motion";
 import { FaWhatsapp } from "react-icons/fa";
 import { SiGooglemaps } from "react-icons/si";
 import { IoCallOutline } from "react-icons/io5";
-import Image from "../../public/images/logo.png";
+import Image from "../../public/images/logo.webp";
 import { fadeIn } from "../utils/motion";
 
 const projectItems = [
   { href: "/projects/ishbilia", label: "أشبيليا" },
   { href: "/projects/omarycenter", label: "العمري سنتر" },
   { href: "/projects/derahcenter", label: "مركز الديرة" },
+  { href: "/projects/carcenter", label: "مركز السيارة" },
 ];
 
 const navLinks = [

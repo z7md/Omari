@@ -1,9 +1,9 @@
 import React from 'react';
-import slack from '../../public/images/slack.png'
-import amazon from '../../public/images/amazon.png'
-import woocommerce from '../../public/images/woocommerce.png'
-import meundies from '../../public/images/meundies.png'
-import sitepoint from '../../public/images/sitepoint.png'
+import slack from '../../public/images/slack.webp'
+import amazon from '../../public/images/amazon.webp'
+import woocommerce from '../../public/images/woocommerce.webp'
+import meundies from '../../public/images/meundies.webp'
+import sitepoint from '../../public/images/sitepoint.webp'
 
 const CompanyLogo = () => {
   const logos = [slack, amazon, woocommerce, meundies, sitepoint];

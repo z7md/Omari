@@ -1,10 +1,9 @@
 // src/components/Hero.jsx
 import React from 'react';
-import sampleVideo from "../../public/images/home.mp4";
-import sampleVideo1 from "../../public/images/HomeVid.mp4";
-import sampleVideo2 from "../../public/images/OmaryCenterVid.mov";
-import centerImage from "../../public/images/Al-Omarigroup1.png"; // example image
-import centerImage1 from "../../public/images/OmaryGC1.png"; // example image
+import sampleVideo1 from "../../public/images/homeFina.mp4";
+import sampleVideo2 from "../../public/images/OmaryCenterVi.mov";
+import centerImage from "../../public/images/Al-Omarigroup1.webp"; // example image
+import centerImage1 from "../../public/images/OmaryGC1.webp"; // example image
 
 
 const VIDEO_MAP = {

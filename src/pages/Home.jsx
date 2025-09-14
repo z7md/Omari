@@ -71,7 +71,6 @@ function Home() {
         viewport={{ once: true, amount: 0.1 }}
         className="py-8"
       >
-        <Partners />
       </motion.section>
 
       {/* FOOTER */}

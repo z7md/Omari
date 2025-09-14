@@ -47,7 +47,7 @@ const Diwaniyas = [
   },{
     id: 2,
     title: "ديوانية العُمري تستضيف معالي الشيخ صالح بن حميد",
-    images: ["/images/Dy2-1.jpeg", "/images/Dy2-2.jpeg", "/images/Dy2-3.jpeg","/images/Dy2-4.jpeg"],
+    images: ["/images/Dy2-1.webp", "/images/Dy2-2.webp", "/images/Dy2-3.webp","/images/Dy2-4.webp"],
     date:"2022/02/03"},
   {
     id: 3,

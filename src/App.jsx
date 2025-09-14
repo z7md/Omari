@@ -11,6 +11,7 @@ import Omarycenter from './pages/Omarycenter';
 import Derah from './pages/Derah'
 import ScrollToTop from './components/ScrollToTop'
 import Diwaniya from "./pages/Diwaniya"
+import CarCenter from "./pages/CarCenter"
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/projects/omarycenter" element={<Omarycenter/>} />
         <Route path="/projects/derahcenter" element={<Derah/>} />
         <Route path="/diwaniya" element={<Diwaniya/>} />
+        <Route path="/projects/carcenter" element={<CarCenter />} />
       </Routes>
       </BrowserRouter>
     

@@ -31,9 +31,9 @@ const Omarycenter = () => {
   );
 
   const PHASES_GALLERY = [
-    "/images/omariCen1.JPG",
-    "/images/omariCen2.JPG",
-    "/images/omariCen3.jpg",
+    "/images/omariCen1.webp",
+    "/images/omariCen2.webp",
+    "/images/omariCen3.webp",
   ];
 
   return (
