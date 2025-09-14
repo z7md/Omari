@@ -29,8 +29,8 @@ import {
   ArrowLeft,
   Star
 } from "lucide-react";
-import HERO_IMAGE_MD from "../../public/images/carCenter1.webp";
-import HERO_IMAGE from "../../public/images/carCenter2.webp";
+import HERO_IMAGE_MD from "../../public/images/CarCenter1.webp";
+import HERO_IMAGE from "../../public/images/CarCenter2.webp";
 import projectHero from "../../public/images/omaryCenter.webp";
 import patternBg from "../../public/images/omaryCenter.webp";
 import { Link } from "react-router-dom";
