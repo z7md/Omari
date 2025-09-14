@@ -42,7 +42,7 @@ const Diwaniyas = [
   {
     id: 1,
     title: "ديوانية العُمري تحتفل بيوم التأسيس",
-    images: ["/images/Dy1-1.jpg", "/images/Dy1-2.jpg", "/images/Dy1-3.jpg","/images/Dy1-4.jpg"],
+    images: ["/images/Dy1-1.webp", "/images/Dy1-2.webp", "/images/Dy1-3.webp","/images/Dy1-4.webp"],
     date:"2025-02-2"
   },{
     id: 2,
@@ -52,28 +52,28 @@ const Diwaniyas = [
   {
     id: 3,
     title: "لقاء ” الاستثمار الجرئ .. التجارب والمستقبل ” مع الأستاذ عمر المجدوعي",
-    images: ["/images/Dy3-1.jpg", "/images/Dy3-2.jpg", "/images/Dy3-3.jpg","/images/Dy3-4.jpg"],
+    images: ["/images/Dy3-1.webp", "/images/Dy3-2.webp", "/images/Dy3-3.webp","/images/Dy3-4.webp"],
     date:"2020/2/20"},
   {
     id: 4,
     title: "ديوانية العُمري تحتفل بيوم التأسيس بضيافة الأستاذ عبدالله العثيم  ",
-    images: ["/images/Dy4-1.jpg", "/images/Dy4-2.jpg", "/images/Dy4-3.jpg","/images/Dy4-4.jpg"],
+    images: ["/images/Dy4-1.webp", "/images/Dy4-2.webp", "/images/Dy4-3.webp","/images/Dy4-4.webp"],
     date:"2024-05-03" },
   {
     id: 5,
     title: "فعالية اليوم الشعبي ",
-    images: ["/images/Dy5-1.jpg", "/images/Dy5-2.jpg", "/images/Dy5-3.jpg","/images/Dy5-4.jpg"],
+    images: ["/images/Dy5-1.webp", "/images/Dy5-2.webp", "/images/Dy5-3.webp","/images/Dy5-4.webp"],
     date:"2021/12/05"},
   {
     id: 6,
     title: "ديوانية العُمري ببريدة تستضيف الشيخ ماجد الصباح",
-    images: ["/images/Dy6-1.jpg", "/images/Dy6-2.jpg", "/images/Dy6-3.jpg","/images/Dy6-4.jpg"],
+    images: ["/images/Dy6-1.webp", "/images/Dy6-2.webp", "/images/Dy6-3.webp","/images/Dy6-4.webp"],
     date:"2017/02/24"
   },
   {
     id: 7,
     title: "ديوانية العُمري تستضيف الشيخ صالح المغامسي",
-    images: ["/images/Dy7-1.jpg", "/images/Dy7-2.jpg", "/images/Dy7-3.jpg","/images/Dy7-4.jpg"],
+    images: ["/images/Dy7-1.webp", "/images/Dy7-2.webp", "/images/Dy7-3.webp","/images/Dy7-4.webp"],
     date:"2016/12/20"},
   {
     id: 8,
