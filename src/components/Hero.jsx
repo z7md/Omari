@@ -1,14 +1,14 @@
 // src/components/Hero.jsx
 import React from 'react';
-import sampleVideo1 from "../../public/images/homeFina.mp4";
-import sampleVideo2 from "../../public/images/OmaryCenterVi.mov";
+// import sampleVideo1 from "../../public/images/homeFina.mp4";
+// import sampleVideo2 from "../../public/images/OmaryCenterVi.mov";
 import centerImage from "../../public/images/Al-Omarigroup1.webp"; // example image
 import centerImage1 from "../../public/images/OmaryGC1.webp"; // example image
 
 
 const VIDEO_MAP = {
-  home: sampleVideo1,   // mp4
-  OmaryCenter: sampleVideo2, // mov
+  home: "/images/homeFina.mp4",   // mp4
+  OmaryCenter: "/images/OmaryCenterVi.mov", // mov
 };
 const PHOTO_MAP = {
   home: centerImage,   // mp4
