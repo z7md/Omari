@@ -174,12 +174,12 @@ export default function Ishbilia() {
         </div>
 
         {/* 2) مخططات الموقع العام و شبكة الطرق الداخلية والخارجية */}
-        <div className="mt-12">
+        {/* <div className="mt-12">
           <SectionTitle>مخططات الموقع العام و شبكة الطرق الداخلية والخارجية</SectionTitle>
           <div className="flex justify-center items-center">
             <img src={MASTERPLAN_IMAGE} alt="المخطط العام للموقع" className="border object-contain max-h-[600px] w-fit rounded-2xl" />
           </div>
-        </div>
+        </div> */}
 
         {/* 3) مرافق المشروع */}
         <div className="mt-12">

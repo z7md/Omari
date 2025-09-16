@@ -17,7 +17,6 @@ const projectItems = [
 const navLinks = [
   { href: "/", label: "الرئيسية" },
   { href: "/about", label: "مجموعة العمري" },
-  { href: "/projects", label: "مشاريعنا" },
   { href: "/projects/initiative", label: "العمري لخدمة المجتمع" },
   { href: "/diwaniya", label: "ديوانية العمري" },
   { href: "/contact", label: "تواصل معنا" },
